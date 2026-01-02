@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
-  SiDjango, SiReact, SiMysql, SiPython,
-  SiLinux, SiExpress, SiNodedotjs, SiHtml5, SiArduino, SiGithub,
-  SiGnubash,
-  SiCplusplus,
+  SiDjango, SiReact, SiPython,
+  SiLinux, SiNodedotjs, SiHtml5, SiGithub,
   SiThemoviedatabase,
   SiPostman,
   SiSelenium
@@ -12,12 +10,12 @@ import { motion } from 'framer-motion';
 import {
   MapPin, GraduationCap, Medal, Github, Mail, Phone,
   Database, Cpu, Code2, ExternalLink, Linkedin, BookOpen, Share2,
-  Globe,
   Shield
 } from 'lucide-react';
 
 export default function App() {
-  const [githubRepos, setGithubRepos] = useState([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [githubRepos, setGithubRepos] = useState<any[]>([]);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/Ousmaneleye/repos?sort=updated&per_page=4`)

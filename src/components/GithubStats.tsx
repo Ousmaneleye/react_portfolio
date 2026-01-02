@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Github, Star, GitBranch, Folder } from 'lucide-react';
+import { Github, Star, Folder } from 'lucide-react';
 
 export default function GithubStats() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [repos, setRepos] = useState<any[]>([]);
 
   // ✅ Ton pseudo est configuré ici
